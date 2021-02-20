@@ -1,0 +1,14 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "predeploy": "rmdir /s /q node_modules\\sharp && npm install --platform=linux --arch=x64 --target=12.18.4 sharp",
+    "deploy": "sls deploy -v",
+    "postdeploy": "rmdir /s /q node_modules\\sharp && npm install sharp"
+  },
+  "dependencies": {
+    "sharp": "^0.27.1"
+  }
+}
